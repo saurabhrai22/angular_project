@@ -33,7 +33,10 @@ module.exports = function (config) {
 	angularCli: {
       environment: 'dev'
     },
-    reporters: ['progress', 'kjhtml'],
+    // reporters: ['progress', 'kjhtml'],
+	reporters: config.angularCli && config.angularCli.codeCoverage
+              ? ['progress', 'karma-remap-istanbul', 'kjhtml']
+              : ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
