@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { Routes,RouterModule } from '@angular/router'
+import { Routes,RouterModule } from '@angular/router';
+import { ContactComponent } from './contact/contact.component'
 
 
 const ROUTES: Routes = [
 
 { path:"",component:HomeComponent },
-{ path:"about",component:AboutComponent }
+{ path:"about",component:AboutComponent },
+{ path:"contact",component:ContactComponent }
 
 
 ]
@@ -19,7 +21,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
